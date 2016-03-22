@@ -4,16 +4,21 @@
         <h1>Device Listing and Status</h1>
 
         {% for pin in pins %}
-        <p>{{ pins[pin].name }} </p>
-        {% if pins[pin].state == true %}
-           <a class="btn btn-default" href="/{{pin}}/off">turn off</a>
-        {% else %}
-           <a class="btn btn-default" href="/{{pin}}/on">turn on</a>
-        {% endif %}
-        {% endfor %}
-
-        {% if message %}
-        <h2>{{ message }}</h2>
-        {% endif %}
+        <div class="row">
+            <div class="col-sm-8">
+                <p>{{ pins[pin].name }} </p>
+                {% if pins[pin].state == true %}
+                   <a class="btn btn-default" href="/{{pin}}/off">turn off</a>
+                {% else %}
+                   <a class="btn btn-default" href="/{{pin}}/on">turn on</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-sm-4">
+                {% if message %}
+                <h2>{{ message }}</h2>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock %}
