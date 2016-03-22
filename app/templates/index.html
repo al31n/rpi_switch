@@ -10,9 +10,9 @@
             </div>
             <div class="col-sm-4">
                 {% if pins[pin].state == true %}
-                   <a class="btn btn-default btn-block" href="/{{pin}}/off">turn off</a>
+                   <a class="btn btn-primary btn-block" href="/{{pin}}/off">turn off</a>
                 {% else %}
-                   <a class="btn btn-default btn-block" href="/{{pin}}/on">turn on</a>
+                   <a class="btn btn-primary btn-block" href="/{{pin}}/on">turn on</a>
                 {% endif %}
                 {% endfor %}
             </div>
