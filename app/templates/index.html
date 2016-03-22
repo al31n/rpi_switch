@@ -5,12 +5,14 @@
 
         {% for pin in pins %}
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-4">
                 <p>{{ pins[pin].name }} </p>
+            </div>
+            <div class="col-sm-4">
                 {% if pins[pin].state == true %}
-                   <a class="btn btn-default" href="/{{pin}}/off">turn off</a>
+                   <a class="btn btn-default btn-block" href="/{{pin}}/off">turn off</a>
                 {% else %}
-                   <a class="btn btn-default" href="/{{pin}}/on">turn on</a>
+                   <a class="btn btn-default btn-block" href="/{{pin}}/on">turn on</a>
                 {% endif %}
                 {% endfor %}
             </div>
