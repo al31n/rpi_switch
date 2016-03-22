@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 pins = {
-    4 : {'name': 'LAMP SWITCH', 'state': GPIO.LOW }
+    23 : {'name': 'LAMP SWITCH', 'state': GPIO.LOW }
 }
 
 for pin in pins:
@@ -17,7 +17,7 @@ for pin in pins:
 def index():
     for pin in pins:
         pins[pin]['state'] = GPIO.input(pin)
-    templateDatea = {
+    templateData = {
         'pins' : pins
     }
     return render_template('index.html', **templateData)
